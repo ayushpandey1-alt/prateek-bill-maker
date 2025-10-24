@@ -1,0 +1,224 @@
+.invoice-form {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 25px;
+  border: 2px solid #d0d0d0;
+  border-radius: 10px;
+  background: #fafafa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+.invoice-form h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.invoice-form section {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.invoice-form h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-weight: bold;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 10px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+}
+
+.form-row label {
+  width: 180px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.form-row input,
+.form-row textarea {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  height: 60px;
+}
+
+.goods-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.goods-row input {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Item description is wider */
+.goods-row .desc-input {
+  flex: 2;
+  min-width: 220px;
+}
+
+/* Other inputs are smaller */
+.goods-row .small-input {
+  width: 90px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+/* Buttons styling */
+.add-btn,
+.remove-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
+
+.remove-btn:hover {
+  background-color: #b02a37;
+}
+
+/* ===========================
+   📱 MOBILE & TABLET FRIENDLY
+   =========================== */
+
+/* Tablets (up to 1024px) */
+@media (max-width: 1024px) {
+  .invoice-form {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .form-row label {
+    width: 150px;
+  }
+
+  .goods-row .small-input {
+    width: 80px;
+  }
+}
+
+/* Mobile (up to 768px) */
+@media (max-width: 768px) {
+  .invoice-form {
+    padding: 15px;
+    border-width: 1px;
+  }
+
+  .invoice-form h1 {
+    font-size: 1.5rem;
+  }
+
+  .invoice-form h2 {
+    font-size: 1.1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row label {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .form-row input,
+  .form-row textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .goods-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .goods-row input {
+    width: 95%;
+  }
+
+  .goods-row .desc-input,
+  .goods-row .small-input {
+    min-width: 95%;
+    text-align: left;
+  }
+
+  .add-btn,
+  .remove-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+/* Very Small Screens (up to 480px) */
+@media (max-width: 480px) {
+  .invoice-form {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .invoice-form h1 {
+    font-size: 1.3rem;
+  }
+
+  .invoice-form h2 {
+    font-size: 1rem;
+  }
+
+  .form-row label {
+    font-size: 13px;
+  }
+
+  input,
+  textarea {
+    font-size: 13px;
+  }
+
+  .add-btn,
+  .remove-btn {
+    font-size: 13px;
+  }
+}
+
+
